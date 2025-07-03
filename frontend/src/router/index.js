@@ -2,12 +2,13 @@ import { createRouter, createWebHistory } from 'vue-router';
 import Home from '../views/Home.vue';
 import FamilyTreeList from '../views/FamilyTreeList.vue';
 import FamilyMemberList from '../views/FamilyMemberList.vue';
-import FamilyMemberDetail from '../views/FamilyTreeDetail.vue';
+import FamilyMemberDetail from '../views/FamilyMemberDetail.vue';
 import UserList from '../views/UserList.vue';
 import MediaList from '../views/MediaList.vue';
 import NoteList from '../views/NoteList.vue';
 import RelationshipList from '../views/RelationshipList.vue';
-import FamilyTreeDetail from '../views/FamilyTreeDetail.vue';
+import FamilyTreeDetail from '../views/FamilyMemberDetail.vue';
+import LoginView from '../views/auth/Login.vue'
 
 const routes = [
   { path: '/', component: Home },
@@ -18,7 +19,8 @@ const routes = [
   { path: '/users', component: UserList },
   { path: '/media', component: MediaList },
   { path: '/notes', component: NoteList },
-  { path: '/relationships', component: RelationshipList }
+  { path: '/relationships', component: RelationshipList },
+  { path: '/login', component: LoginView, name: 'login' }
 ];
 
 const router = createRouter({
